@@ -1,6 +1,6 @@
 ﻿using CourseLibrary.API.DbContexts;
 using CourseLibrary.API.Entities;
-using PracticeAPI.ResourceParameters;
+using DotNetAPI.ResourceParameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;

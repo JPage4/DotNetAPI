@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PracticeAPI.Profiles
+namespace DotNetAPI.Profiles
 {
     public class CoursesProfile : Profile
     {
@@ -12,6 +12,7 @@ namespace PracticeAPI.Profiles
         {
             CreateMap<CourseLibrary.API.Entities.Course, Models.CourseDto>();
             CreateMap<Models.CourseForCreationDto, CourseLibrary.API.Entities.Course>();
+            CreateMap<Models.CourseForUpdateDto, CourseLibrary.API.Entities.Course>();
         }
     }
 }

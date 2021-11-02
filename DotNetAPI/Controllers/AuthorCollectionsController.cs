@@ -2,14 +2,14 @@
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using PracticeAPI.Helpers;
-using PracticeAPI.Models;
+using DotNetAPI.Helpers;
+using DotNetAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PracticeAPI.Controllers
+namespace DotNetAPI.Controllers
 {
     [ApiController]
     [Route("api/authorCollections")]

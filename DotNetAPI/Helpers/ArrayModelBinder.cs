@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace PracticeAPI.Helpers
+namespace DotNetAPI.Helpers
 {
     public class ArrayModelBinder : IModelBinder
     {

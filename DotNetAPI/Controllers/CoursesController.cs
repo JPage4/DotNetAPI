@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CourseLibrary.API.Services;
+using DotNetAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using PracticeAPI.Models;
+using DotNetAPI.Models;
 
-namespace PracticeAPI.Controllers
+namespace DotNetAPI.Controllers
 {
     [ApiController]
     [Route("api/authors/{authorId}/courses")]
@@ -67,6 +68,30 @@ namespace PracticeAPI.Controllers
 
             var courseToReturn = _mapper.Map<CourseDto>(courseEntity);
             return CreatedAtRoute("GetCourseForAuthor", new { authorId = authorId, courseId = courseToReturn.Id }, courseToReturn);
+        }
+
+        [HttpPut("{courseId}")]
+        public ActionResult UpdateCourseForAuthor(Guid authorId, Guid courseId, CourseForUpdateDto course)
+        { 
+            if(!_courseLibraryRepository.AuthorExists(authorId))
+            {
+                return NotFound();
+            }
+
+            var courseForAuthorFromRepo = _courseLibraryRepository.GetCourse(authorId, courseId);
+
+            if (courseForAuthorFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            //map entiry to CourseForUpdateDto
+            //apply the updated field values to that dto
+            // map the CourseForUpdateDto back to an entity
+            _mapper.Map(course, courseForAuthorFromRepo);
+            _courseLibraryRepository.UpdateCourse(courseForAuthorFromRepo);
+            _courseLibraryRepository.Save();
+            return NoContent();
         }
     }
 }

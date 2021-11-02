@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PracticeAPI.Helpers
+namespace DotNetAPI.Helpers
 {
     public static class DateTimeOffsetExtensions
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using PracticeAPI.Helpers;
+using DotNetAPI.Helpers;
 
-namespace PracticeAPI.Profiles
+namespace DotNetAPI.Profiles
 {
     public class AuthorsProfile : Profile
     {

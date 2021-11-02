@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace PracticeAPI.Migrations
+namespace DotNetAPI.Migrations
 {
     [DbContext(typeof(CourseLibraryContext))]
     partial class CourseLibraryContextModelSnapshot : ModelSnapshot

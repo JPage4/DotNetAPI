@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Mvc;
-using PracticeAPI.Helpers;
-using PracticeAPI.Models;
-using PracticeAPI.ResourceParameters;
+using DotNetAPI.Helpers;
+using DotNetAPI.Models;
+using DotNetAPI.ResourceParameters;
 
-namespace PracticeAPI.Controllers
+namespace DotNetAPI.Controllers
 {
     [ApiController]
     [Route("api/authors")]
