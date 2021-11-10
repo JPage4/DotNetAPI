@@ -32,12 +32,12 @@ namespace CourseLibrary.API
                 setupAction.ReturnHttpNotAcceptable = true;
 
             })
-            //    .AddNewtonsoftJson(setupAction =>
-            //{
-            //    setupAction.SerializerSettings.ContractResolver =
-            //       new CamelCasePropertyNamesContractResolver();
-            //})
-             .AddXmlDataContractSerializerFormatters()
+            .AddNewtonsoftJson(setupAction =>
+            {
+                setupAction.SerializerSettings.ContractResolver =
+                   new CamelCasePropertyNamesContractResolver();
+            })
+            .AddXmlDataContractSerializerFormatters()
             .ConfigureApiBehaviorOptions(setupAction =>
             {
                 setupAction.InvalidModelStateResponseFactory = context =>
